@@ -3,6 +3,8 @@ import { ref } from 'vue';
 import { useListPoolStore } from '../stores/poolStore';
 import { configs } from '../configs';
 import Answer from './../models/models';
+import AnswerItem from './AnswerItem.vue';
+import AnswerForm from './AnswerForm.vue';
 
 const listPool = useListPoolStore();
 

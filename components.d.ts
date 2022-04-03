@@ -10,6 +10,7 @@ declare module 'vue' {
     HomeView: typeof import('./src/views/HomeView.vue')['default']
     PoolForm: typeof import('./src/components/PoolForm.vue')['default']
     Survey: typeof import('./src/components/Survey.vue')['default']
+    SurveyAnswerItem: typeof import('./src/components/SurveyAnswerItem.vue')['default']
     Tab: typeof import('./src/components/Tab.vue')['default']
   }
 }

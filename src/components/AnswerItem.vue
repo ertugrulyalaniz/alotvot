@@ -27,6 +27,7 @@ const removeItem = (id:string) => {
 
 <template>
     <input
+        data-test="answer-item"
         class="inputs"
         type="text"
         :value="item.name"
@@ -34,6 +35,7 @@ const removeItem = (id:string) => {
         @input="editItem($event, item.id)"
     />
     <button
+        data-test="answer-delete"
         class="button danger-button"
         :disabled="isDisabled"
         @click="removeItem(item.id)"

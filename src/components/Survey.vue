@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useListPoolStore } from '../stores/poolStore';
+import SurveyAnswerItem from './SurveyAnswerItem.vue';
 import Answer from './../models/models';
 
 const listPool = useListPoolStore();
@@ -11,6 +12,10 @@ const props = defineProps({
   }
 })
 const selected = ref('none');
+
+const selectHandler = (event:string) => {
+  selected.value=event  
+}
 
 const setVote = () => {
   listPool.addVote(selected.value);
@@ -26,19 +31,9 @@ const setVote = () => {
         {{ listPool.question }}
         <span v-if="!listPool.question" class="text-slate-400">{{ $t('question_placeholder') }}</span>
       </h2>
-
       <transition-group name="list" tag="div">
         <div v-for="(item, i) in list" :key="i" class>
-          <label class="inline-flex items-center mb-4">
-            <input
-              v-model="selected"
-              type="radio"
-              class="radio-input"
-              name="radio-sizes"
-              :value="item.id"
-            />
-            <span class="ml-4 text-xl overflow-hidden text-ellipsis" :title="item.name">{{ item.name }}</span>
-          </label>
+          <SurveyAnswerItem :selected="item.id===selected" :item="item" @selectItem="selectHandler"/>
         </div>
       </transition-group>
     </div>
@@ -52,11 +47,7 @@ const setVote = () => {
   </div>
 </template>
 <style scoped lang="scss">
-.radio-input {
-  @apply flex items-center cursor-pointer h-8 w-8 ;
-  min-height: 2rem;
-  min-width: 2rem;
-}
+
 .list-enter-active,
 .list-leave-active {
   transition: all 0.5s ease;

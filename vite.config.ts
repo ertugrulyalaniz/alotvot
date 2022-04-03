@@ -20,9 +20,5 @@ export default defineConfig({
         dts: true,
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
     }),
-  ],
-  test: {
-    globals: true,
-    environment: 'jsdom',
-  },
+  ]
 })

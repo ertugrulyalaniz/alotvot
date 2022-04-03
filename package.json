@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview --port 5050",
-    "test:unit": "vitest --environment jsdom",
+    "test:unit": "jest --watchAll",
     "typecheck": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
@@ -23,6 +23,7 @@
     "@pinia/testing": "^0.0.11",
     "@rushstack/eslint-patch": "^1.1.0",
     "@testing-library/vue": "^6.5.1",
+    "@types/jest": "^27.4.1",
     "@types/jsdom": "^16.2.14",
     "@types/node": "^16.11.25",
     "@vitejs/plugin-vue": "^2.2.2",
@@ -46,11 +47,12 @@
     "prettier-plugin-tailwindcss": "^0.1.4",
     "sass": "^1.48.0",
     "tailwindcss": "^3.0.23",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
     "typescript": "~4.5.5",
     "unplugin-vue-components": "^0.17.13",
     "vite": "^2.8.4",
     "vite-plugin-components": "^0.13.3",
-    "vitest": "^0.5.0",
     "vue-tsc": "^0.31.4"
   }
 }

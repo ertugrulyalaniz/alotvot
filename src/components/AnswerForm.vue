@@ -24,6 +24,7 @@ const add = () => {
 <template>
     <input
         v-model="inputValue"
+        data-test="answer-input"
         class="inputs"
         :placeholder="$t('answer_placeholder')"
         type="text"
@@ -32,6 +33,7 @@ const add = () => {
         @keypress.enter="add"
     />
     <button
+        data-test="answer-submit"
         class="button ml-3 grow flex"
         :disabled="inputValue.length == 0"
         @click="add"
