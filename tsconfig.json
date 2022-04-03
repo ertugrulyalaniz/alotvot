@@ -1,0 +1,41 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "moduleResolution": "node",
+        "target": "esnext",
+        "sourceMap": true,
+        "allowJs": true,
+        "useDefineForClassFields": true,
+        "jsx": "preserve",
+        "strict": true,
+        "resolveJsonModule": true,
+        "forceConsistentCasingInFileNames": true,
+        "esModuleInterop": true,
+        "removeComments": true,
+        "importHelpers": true,
+        "skipLibCheck": false,
+        "lib": ["esnext", "dom"],
+        "types": [
+            "vite/client",
+        ],
+        "paths": {
+            "/~/*": ["./src/assets/*"],
+            "/@src/*": ["./src/*"],
+            "/@assets/*": ["./src/assets/*"]
+        }
+    },
+    "include": [
+        "components.d.ts",
+        "components-global.d.ts",
+        "src/**/*.js",
+        "src/**/*.ts",
+        "src/**/*.d.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue",
+        "documentation/**/*.md"
+    ],
+    "types": [
+        "pinia-plugin-persist",
+        "@intlify/vite-plugin-vue-i18n/client"
+    ]
+}

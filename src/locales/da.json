@@ -1,0 +1,12 @@
+{   
+    "buttons":{
+        "vote": "Stem",
+        "add": "Toevoegen",
+        "reset": "Resetten"
+    },
+    "possible_answers": "Beantwoordbare {count}/10 opties",
+    "total_votes": "Totaal aantal stemmen: {count}",
+    "change_locale": "Taal wijzigen",
+    "answer_placeholder":"Schrijf antwoord",
+    "question_placeholder":"Schrijf uw vraag"
+}

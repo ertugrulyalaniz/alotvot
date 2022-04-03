@@ -1,0 +1,12 @@
+{   
+    "buttons":{
+        "vote": "Vote",
+        "add": "Add",
+        "reset": "Reset"
+    },
+    "possible_answers": "{count}/10 Possible Answers",
+    "total_votes": "Total votes: {count}",
+    "change_locale": "Change Language",
+    "answer_placeholder":"Type an answer",
+    "question_placeholder":"Type Your Question"
+}
