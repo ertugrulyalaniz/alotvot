@@ -3,8 +3,7 @@
 Simple Vote Application should help get you started developing with Vue 3 in Vite.
 Store management with Pinia. For charts Chart.js. Localization with vue-i18n.For routing vue-router.
 
-
-
+Test not covered completely.
 
 ## Project Setup
 
